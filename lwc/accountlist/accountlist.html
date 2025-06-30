@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="Account List">
+<template if:true={accounts}>
+<template for:each={accounts} for:item="acc">
+<div key={acc.Id} class="slds-m-around_medium">
+<p>🔹 <strong>Account Name:</strong> {acc.Name}</p>
+<p><strong>Description:</strong> {acc.Description}</p>
+<hr />
+</div>
+</template>
+</template>
+<template if:true={error}>
+<p class="slds-text-color_error">Error: {error.body.message}</p>
+</template>
+</lightning-card>
+</template>

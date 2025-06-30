@@ -1,0 +1,30 @@
+<template>
+  <lightning-card class="slds-p-around_medium">
+    <div class="slds-text-heading_large slds-text-align_center">Weather Checker</div>
+    <lightning-input
+      label="City"
+      value={city}
+      onchange={handleCityChange}
+      class="slds-m-top_medium"
+    ></lightning-input>
+    <lightning-button
+      label="Get Weather"
+      variant="brand"
+      onclick={fetchWeather}
+      class="slds-m-top_medium slds-align_absolute-center"
+    ></lightning-button>
+
+    <template if:true={weather}>
+      <div class="slds-box slds-m-top_large slds-text-heading_medium slds-text-align_center">
+        <p><strong>{weather.name}</strong></p>
+        <p>🌡 {tempCelsius}°C</p>
+        <p>💧 {weather.main.humidity}% humidity</p>
+       <p class="weather-description">📝 {weatherDescription}</p>
+      </div>
+    </template>
+
+    <template if:true={error}>
+      <div class="slds-text-color_error slds-m-top_medium">{error}</div>
+    </template>
+  </lightning-card>
+</template>

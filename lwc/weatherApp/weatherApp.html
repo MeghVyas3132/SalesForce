@@ -1,0 +1,22 @@
+<template>
+<div class="container">
+<h1>☁️ Live Weather Checker</h1>
+<div class="input-group">
+<lightning-input label="Enter City" value={city} onchange={handleCityChange}></lightning-input>
+<lightning-button label="Get Weather" onclick={getWeather}></lightning-button>
+</div>
+<template if:true={weather}>
+<div class="result">
+<h2>{weather.city}</h2>
+<p><strong>🌡 Temperature:</strong> {weather.temperature} °C</p>
+<p><strong>💧 Humidity:</strong> {weather.humidity}%</p>
+<p><strong>📝 Description:</strong> {weather.description}</p>
+</div>
+</template>
+<template if:true={error}>
+<div class="error">
+               ⚠️ {error}
+</div>
+</template>
+</div>
+</template>

@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="Search Contacts by Account Name">
+<lightning-input label="Account Name" value={accountName} onchange={handleInput}></lightning-input>
+<lightning-button label="Search" onclick={handleSearch} class="slds-m-top_medium"></lightning-button>
+<template if:true={contacts}>
+<lightning-datatable
+               key-field="Id"
+               data={contacts}
+               columns={columns}>
+</lightning-datatable>
+</template>
+<template if:true={error}>
+<p class="slds-text-color_error">{error}</p>
+</template>
+</lightning-card>
+</template>

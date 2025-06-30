@@ -1,0 +1,46 @@
+.scene {
+   position: relative;
+   height: 200px;
+   background: black;
+   border-radius: 10px;
+   padding: 20px;
+}
+.wizard {
+   position: absolute;
+   left: 20px;
+   bottom: 40px;
+   font-size: 40px;
+}
+.target {
+   position: absolute;
+   right: 20px;
+   top: 50px;
+   font-size: 40px;
+}
+.fireball {
+   position: absolute;
+   left: 60px;
+   bottom: 70px;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: radial-gradient(circle, orange, red);
+   opacity: 0;
+}
+.fireball.animate {
+   animation: launch 1s linear forwards;
+}
+@keyframes launch {
+   0% {
+       transform: translateX(0);
+       opacity: 1;
+   }
+   50% {
+       transform: translateX(200px) translateY(-30px);
+       background: radial-gradient(circle, yellow, red);
+   }
+   100% {
+       transform: translateX(400px) translateY(-60px);
+       opacity: 0;
+   }
+}

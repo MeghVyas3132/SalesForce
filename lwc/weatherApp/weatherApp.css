@@ -1,0 +1,33 @@
+.container {
+  padding: 3rem;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem; /* bigger font for inputs/labels */
+}
+
+.input-group input,
+.input-group label,
+.result {
+  font-size: 1.25rem;
+}
+
+.result {
+  background: #e0f7fa;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.error {
+  color: red;
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+}

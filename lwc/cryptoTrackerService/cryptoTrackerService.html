@@ -1,0 +1,22 @@
+<template>
+<template if:true={loading}>
+    <lightning-card title="Live Bitcoin Price (CoinDesk)"></lightning-card>
+<div class="spinner"></div>
+</template>
+<template if:true={cryptoList}>
+<div class="crypto-container">
+<template for:each={cryptoList} for:item="coin">
+<div class="card" key={coin.name}>
+<h2>{coin.name}</h2>
+<p class="price">${coin.price}</p>
+<p class={coin.changeClass}>
+                       {coin.change}% (24h)
+</p>
+</div>
+</template>
+</div>
+</template>
+<template if:true={error}>
+<p class="error">Failed to load crypto data.</p>
+</template>
+</template>

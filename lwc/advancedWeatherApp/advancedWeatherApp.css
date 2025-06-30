@@ -1,0 +1,46 @@
+:host {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Heading styling */
+.header {
+    font-size: var(--lwc-fontSizeLarge, 2rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Input & button wrapper */
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Weather display box */
+.weather-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--slds-canvas-background-alt, #f4f6f9);
+    border-radius: 0.5rem;
+}
+
+.weather-box p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Error message */
+.error {
+    color: var(--lwc-colorError, #d9534f);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}

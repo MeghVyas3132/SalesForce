@@ -1,0 +1,21 @@
+<template>
+<lightning-card title="Contact List" icon-name="standard:contact">
+<template if:true={contacts}>
+<template for:each={contacts} for:item="con">
+<div key={con.Id} class="slds-box slds-m-around_x-small">
+<p><strong>{con.FirstName} {con.LastName}</strong></p>
+<p>{con.Email}</p>
+<lightning-button
+                       label="Delete"
+                       variant="destructive"
+                       data-id={con.Id}
+                       onclick={handleDelete}>
+</lightning-button>
+</div>
+</template>
+</template>
+<template if:true={error}>
+<p class="slds-text-color_error">{error}</p>
+</template>
+</lightning-card>
+</template>
